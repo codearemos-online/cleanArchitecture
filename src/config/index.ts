@@ -1,7 +1,7 @@
 import { devConfig } from "./dev";
 import { env } from "./env";
 import { prodConfig } from "./prod";
-import { testConfig } from "./test";
+import { testConfig } from "./testing";
 
 const config = {
     development: devConfig,
