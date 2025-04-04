@@ -1,10 +1,7 @@
 import express from "express";
-import dotenv from "dotenv";
-
-dotenv.config();
-
+import { getConfig } from "./config";
 const app = express();
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+app.listen(getConfig().port, () => {
+    console.log(`Server is running on port ${getConfig().port}`);
 });

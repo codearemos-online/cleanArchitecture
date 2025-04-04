@@ -2,3 +2,6 @@
 readme.txt
 package-lock.json
 .env
+.env.testing
+.env.production
+
