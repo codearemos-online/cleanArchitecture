@@ -2,7 +2,8 @@ import * as process from 'process';
 
 describe("env production process",() => {
     beforeEach(() => {
-        process.env.port = "8000";
+        process.env.port = "80";
+        process.env.NODE_ENV = "production";
     })
 
     afterEach(() => {
@@ -12,7 +13,7 @@ describe("env production process",() => {
     it("should load required environment variables", () => {
         const { env } = require('../env');
 
-        expect(env.port).toBe("3000");
+        expect(env.port).toBe("80");
     })
 })
 
