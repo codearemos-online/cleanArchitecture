@@ -22,4 +22,24 @@ export class UserRepository implements IUserRepository{
         return this.users.find(user => user.id === id) || null;
     }
 
+    async create(user:User): Promise<User>{
+        this.users.push(user);
+        return user;
+    }
+
+    async update(user:User): Promise<User | null>{
+        const index = this.users.findIndex(u => u.id === user.id);
+        if(index !== -1){
+            this.users[index] = user;
+            return user;
+        }
+        return null;
+    }
+
+    async delete(id:string):Promise<void>{
+        const index = this.users.findIndex(u => u.id === id);
+        if(index !== -1){
+            this.users.splice(index,1);
+        }
+    }
 }
