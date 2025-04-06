@@ -5,5 +5,6 @@ import { asyncHandler } from "../../shared/utils/asyncHandler";
 const router = Router();
 
 router.get("/:id", asyncHandler(UserController.getUserById));
+router.get("/", asyncHandler(UserController.getUsers));
 
 export default router;
