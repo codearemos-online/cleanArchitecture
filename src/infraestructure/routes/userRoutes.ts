@@ -1,10 +1,9 @@
 import { Router, Request, Response } from "express";
 import { UserController } from "../controllers/UserController";
+import { asyncHandler } from "../../shared/utils/asyncHandler";
 
 const router = Router();
 
-router.get("/:id", async (req: Request, res: Response) => {
-    await UserController.getUserById(req, res);
-});
+router.get("/:id", asyncHandler(UserController.getUserById));
 
 export default router;

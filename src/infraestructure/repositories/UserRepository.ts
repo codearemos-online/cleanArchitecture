@@ -10,6 +10,7 @@ export class UserRepository implements IUserRepository{
             new User("1","John Doe","john.doe@example.com"),
             new User("2","Jane Smith","jane.smith@example.com"),
             new User("3","Alice Johnson","alice.johnson@example.com"),
+            new User("4","Diego Beltran","diego.beltran@example.com"),
         ];
     }
 
