@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { GetUserByIdUseCase } from "../../domain/use-cases/users/GetUserByIdUseCase";
 import { UserRepository } from "../repositories/UserRepository";
 import { GetUsersUseCase } from "../../domain/use-cases/users/GetUsersUseCase";
-import { CreateUserUseCase } from "../../domain/use-cases/users/createUserUseCase";
+import { CreateUserUseCase } from "../../domain/use-cases/users/CreateUserUseCase";
 import { UpdateUserUseCase } from "../../domain/use-cases/users/UpdateUserUseCase";
 import { DeleteUserUseCase } from "../../domain/use-cases/users/DeleteUserUseCase";
 import { User } from "../../domain/entities/User";
